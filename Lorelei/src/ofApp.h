@@ -6,6 +6,7 @@
 class ofApp : public ofBaseApp{
 
     public:
+        ofMesh mesh[1000]; 
         void setup();
         void update();
         void draw();
@@ -24,11 +25,11 @@ class ofApp : public ofBaseApp{
 
     float num;
     ofPoint wind;
-        Ball ball[2000];
+        Ball ball;
     float x;
-    float z;
-    ofPoint fly;
-    
-    
+    ofPath path;
+    ofPolyline polyline2;
+    float b,g,r;
+    ofImage myImage;
         
 };

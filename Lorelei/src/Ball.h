@@ -19,21 +19,28 @@ class Ball{
 
     public:        // other classes can access the following functions & variables:
 
-//        Ball();                // "constructor" function - required for every class
+        Ball();                // "constructor" function - required for every class
                             // this is automatically called whenever we create a new ball
-        void setup(float m);
+        void setup();
         void update();
         void applyForce(ofPoint force);
         void draw();
         void checkEdges();
         
-        ofPoint location;
-        ofPoint velocity;
-        ofPoint acceleration;
+    
         
         float mass;
     float radius; 
         ofColor color;
-      
+    ofPath path;
+    float drag;
+    ofPolyline polyline;
+
+    glm::vec3 pos;
+    glm::vec3 vel;
+    glm::vec3 frc;
+    float x;
+    float y;
+    float velocity;
         
 };
